@@ -1,0 +1,46 @@
+* {
+    color: #333333;
+}
+
+a {
+  color: #000088;
+  text-decoration: none;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: auto;
+  background-color: #000000;
+  vertical-align: middle;
+  border-radius: 6px;
+}
+
+div {
+  width: 500px;
+  min-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+kbd.key {
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  color: #333333;
+  background: #ffffff;
+  box-shadow: 0 0 2px #bbbbbb;
+  font-size: 15px;
+  text-align: center;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  border: solid 1px #000000;
+}
+
+th, td {
+  padding: 10px;
+}

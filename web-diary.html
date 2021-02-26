@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8">
+    <!-- XSS 脆弱性の対策 -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; img-src * data:; media-src * data:;">
+    <meta property="og:title" content="Web Diary">
+    <meta property="og:url" content="https://manekineko1217.github.io/web-diary/web-diary.html">
+    <meta property="og:description" content="日々の出来事を画像や動画と一緒に記録できる日記帳です">
+    <link rel="stylesheet" href="web-diary.css">
+    <title>Web Diary</title>
+</head>
+
+<body>
+    <!-- ツールバー -->
+    <ul class="toolbar">
+        <li class="tool"><button accesskey="c" id="create-button" class="tool-button"></button></li>
+        <li class="tool"><button accesskey="s" id="save-button" class="tool-button"></button></li>
+        <li class="tool"><button accesskey="x" id="delete-button" class="tool-button"></button></li>
+        <li class="tool"><label accesskey="o" id="file-button" class="tool-button" for="file-element"></label></li>
+        <li class="tool"><button accesskey="f" id="search-button" class="tool-button"></button></li>
+        <li class="tool"><button accesskey="w" id="close-button" class="tool-button"></button></li>
+        <li class="tool"><button accesskey="i" id="info-button" class="tool-button"></button></li>
+    </ul>
+    <input id="file-element" type="file" accept="image/*, video/*, audio/*">
+
+    <!-- メインコンテンツ -->
+    <div class="main-contents">
+        <input type="text" id="title-area" maxlength="50">
+        <div id="content-area" contenteditable="true"></div>
+        <div id="write-date"></div>
+    </div>
+
+    <!-- 保存記事リスト -->
+    <ul id="save-list"></ul>
+
+    <script src="web-diary.js" type="module"></script>
+</body>
+
+</html>
