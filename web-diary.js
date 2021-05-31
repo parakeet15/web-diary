@@ -235,7 +235,7 @@ function load(listItem) {
 }
 
 // 保存されている日記を描画する
-window.onload = () => {
+window.addEventListener('load', (event) => {
   const items = new Array();
   for (let i = 0; i < localStorage.length; i++) {
     items.push(localStorage.key(i));
@@ -260,4 +260,9 @@ window.onload = () => {
     keys.length === saveList.childElementCount,
     'リストの項目数が正しくありません'
   );
-}
+});
+
+window.addEventListener('beforeunload', (event) => {
+  event.preventDefault();
+  event.returnValue = 'このページを離れますか？保存していない編集内容は失われます。';
+});
